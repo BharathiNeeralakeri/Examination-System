@@ -1,0 +1,112 @@
+import java.util.Scanner;
+
+public class Hi {
+    public static void main(String[] args) {
+        String login = "bharathi@gmail.com";
+        String password = "bharathi123";
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter your email:");
+        String email = sc.nextLine();
+        System.out.println("Enter your password:");
+        String pass = sc.nextLine();
+
+        if (email.equals(login) && pass.equals(password)) {
+            System.out.println("Login successful!");
+        } else {
+            System.out.println("Invalid email or password.");
+            sc.close();
+            return;
+        }
+
+        System.out.println("Welcome to the quiz!");
+        int marks = 0;
+
+        // Question 1
+        System.out.println("What is the capital of France?");
+        System.out.println("A) Paris");
+        System.out.println("B) London");
+        System.out.println("C) Berlin");
+        System.out.println("Enter your answer (A, B, or C):");
+        String answer1 = sc.nextLine().toUpperCase();
+        if (answer1.equals("A")) {
+            System.out.println("Correct answer!");
+            marks += 1;
+            System.out.println("You have earned 1 mark.");
+        } else {
+            System.out.println("Wrong answer. The correct answer is A) Paris.");
+            System.out.println("Better luck next time!");
+        }
+
+        // Question 2
+        System.out.println("What is the largest planet in our solar system?");
+        System.out.println("A) Earth");
+        System.out.println("B) Jupiter");
+        System.out.println("C) Saturn");
+        System.out.println("Enter your answer (A, B, or C):");
+        String answer2 = sc.nextLine().toUpperCase();
+        if (answer2.equals("B")) {
+            System.out.println("Correct answer!");
+            marks += 1;
+            System.out.println("You have earned 1 mark.");
+        } else {
+            System.out.println("Wrong answer. The correct answer is B) Jupiter.");
+            System.out.println("Better luck next time!");
+        }
+
+        // Question 3
+        System.out.println("Which language is primarily used for Android app development?");
+        System.out.println("A) Python");
+        System.out.println("B) Java");
+        System.out.println("C) Swift");
+        System.out.println("Enter your answer (A, B, or C):");
+        String answer3 = sc.nextLine().toUpperCase();
+        if (answer3.equals("B")) {
+            System.out.println("Correct answer!");
+            marks += 1;
+            System.out.println("You have earned 1 mark.");
+        } else {
+            System.out.println("Wrong answer. The correct answer is B) Java.");
+            System.out.println("Better luck next time!");
+        }
+
+        // Question 4
+        System.out.println("Who is the current CEO of Tesla?");
+        System.out.println("A) Elon Musk");
+        System.out.println("B) Jeff Bezos");
+        System.out.println("C) Sundar Pichai");
+        System.out.println("Enter your answer (A, B, or C):");
+        String answer4 = sc.nextLine().toUpperCase();
+        if (answer4.equals("A")) {
+            System.out.println("Correct answer!");
+            marks += 1;
+            System.out.println("You have earned 1 mark.");
+        } else {
+            System.out.println("Wrong answer. The correct answer is A) Elon Musk.");
+            System.out.println("Better luck next time!");
+        }
+
+        // Question 5
+        System.out.println("Which of the following is a web browser?");
+        System.out.println("A) Windows");
+        System.out.println("B) Chrome");
+        System.out.println("C) Linux");
+        System.out.println("Enter your answer (A, B, or C):");
+        String answer5 = sc.nextLine().toUpperCase();
+        if (answer5.equals("B")) {
+            System.out.println("Correct answer!");
+            marks += 1;
+            System.out.println("You have earned 1 mark.");
+        } else {
+            System.out.println("Wrong answer. The correct answer is B) Chrome.");
+            System.out.println("Better luck next time!");
+        }
+
+        // Final Score
+        System.out.println("Your total marks: " + marks);
+        System.out.println("Thank you for participating in the quiz!");
+        System.out.println("Your final score is: " + marks + " out of 5.");
+
+        sc.close();
+    }
+}
